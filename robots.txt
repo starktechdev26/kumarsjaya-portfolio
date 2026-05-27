@@ -1,0 +1,16 @@
+# =========================================================
+# Hello, fellow developer/recruiter. 
+# Welcome to the digital workspace of Jaya Kumar.
+# Full-Stack Developer | Mobile Security Architecture
+# =========================================================
+
+User-agent: *
+Allow: /
+
+# Directories to prioritize for crawling
+Allow: /assets/
+Allow: /projects/
+
+# Sitemap location for Google Search Console
+Sitemap: https://starktechdev26.github.io/sitemap.xml
+
