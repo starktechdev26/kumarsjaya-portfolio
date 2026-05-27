@@ -1,0 +1,40 @@
+/* =========================================
+   style.css - Core Theme & Variables
+========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+:root {
+  --bg-color: #0b0f19;         /* Deep dark blue/black */
+  --text-main: #ffffff;        /* White text */
+  --text-muted: #8b92a5;       /* Grey text for paragraphs */
+  --accent-color: #00f2c3;     /* Neon green/cyan */
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --card-border: rgba(255, 255, 255, 0.05);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 { color: var(--text-main); }
+.accent-text { color: var(--accent-color); }
+a { text-decoration: none; color: inherit; }
+
+/* Reusable Glassmorphism Card (Like the code boxes in the image) */
+.glass-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  padding: 20px;
+}
+
