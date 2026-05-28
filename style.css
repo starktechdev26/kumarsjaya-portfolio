@@ -37,4 +37,82 @@ a { text-decoration: none; color: inherit; }
   border-radius: 8px;
   padding: 20px;
 }
+/* =========================================
+   CINEMATIC INTRO ANIMATIONS
+========================================= */
+
+/* The full-screen black overlay */
+#cinematic-intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #05070a; /* Slightly darker than your main bg */
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease-out, visibility 1s ease-out;
+}
+
+.intro-content {
+  text-align: center;
+}
+
+/* High-tech glowing text */
+.glitch-text {
+  color: var(--accent-color);
+  font-family: monospace;
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+  animation: pulse 1.5s infinite;
+}
+
+/* The loading bar track */
+.loading-bar-container {
+  width: 200px;
+  height: 2px;
+  background: var(--card-border);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* The actual loading bar filling up */
+.loading-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--accent-color);
+  animation: loadUp 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Keyframes for the intro */
+@keyframes pulse {
+  0%, 100% { opacity: 1; text-shadow: 0 0 10px var(--accent-color); }
+  50% { opacity: 0.5; text-shadow: none; }
+}
+
+@keyframes loadUp {
+  0% { width: 0%; }
+  50% { width: 60%; }
+  100% { width: 100%; }
+}
+
+/* =========================================
+   REVEAL ANIMATION FOR MAIN SITE
+========================================= */
+/* Add this class via JS to make elements slide up smoothly */
+.fade-in-up {
+  animation: fadeInUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
