@@ -148,6 +148,33 @@ Name {
     </div>
   </footer>
 
+  <!-- =======================================
+       ANIMATION LOGIC
+  ======================================== -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const introScreen = document.getElementById('cinematic-intro');
+      const heroSection = document.getElementById('home');
+
+      // Wait for 2.2 seconds (letting the CSS loading bar finish)
+      setTimeout(() => {
+        // Fade out the intro screen
+        introScreen.style.opacity = '0';
+        introScreen.style.visibility = 'hidden';
+        
+        // Add the slide-up animation class to your hero section
+        heroSection.classList.add('fade-in-up');
+        
+        // Remove the intro screen from the DOM entirely after it fades
+        setTimeout(() => {
+          introScreen.remove();
+        }, 1000); 
+
+      }, 2200); 
+    });
+  </script>
+
+  
 </body>
 </html>
 
