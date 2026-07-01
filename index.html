@@ -16,7 +16,7 @@
     }
 
     body {
-      background-color: #e0e5ec;
+      background-color: #d9e2ec; /* Slightly deeper background to make the white A4 pop */
       display: flex;
       justify-content: center;
       padding: 20px;
@@ -40,7 +40,8 @@
       width: 210mm;
       height: 297mm; /* Exact A4 Height */
       background-color: #e0e5ec;
-      box-shadow: 20px 20px 60px #bec3c9, -20px -20px 60px #ffffff;
+      /* Enhanced 3D Neumorphic Shadow */
+      box-shadow: 25px 25px 50px #b8c0c8, -25px -25px 50px #ffffff;
       border-radius: 12px;
       display: flex;
       flex-direction: column;
@@ -50,101 +51,109 @@
 
     /* Top Decorative Header */
     .page-header {
-      height: 15px;
-      background: linear-gradient(90deg, #2c3e50, #d35400);
+      height: 18px;
+      background: linear-gradient(90deg, #1a252f, #2c3e50, #d35400, #e67e22);
       width: 100%;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      z-index: 10;
     }
 
     /* Main Body Container */
     .content-wrapper {
       display: flex;
       flex: 1;
-      height: calc(100% - 35px); /* Accounts for header and footer */
+      height: calc(100% - 38px); /* Accounts for header and footer */
     }
 
-    /* Left Sidebar (3D Elevated) */
+    /* Left Sidebar (3D Elevated with Richer Gradient) */
     .sidebar {
       width: 36%;
-      background: linear-gradient(145deg, #f0f0f0, #cacaca);
-      padding: 25px 20px;
-      border-right: 1px solid #d1d9e6;
+      background: linear-gradient(135deg, #e8ecef 0%, #d1d9e6 100%);
+      padding: 30px 20px;
+      border-right: 2px solid #ffffff;
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 18px;
+      box-shadow: inset -5px 0 15px rgba(0,0,0,0.02);
     }
 
     /* Right Main Content */
     .main-content {
       width: 64%;
       background-color: #fafafa;
-      padding: 25px 30px;
+      padding: 30px 32px;
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      justify-content: space-between; /* Dynamically fills vertical space */
     }
 
     /* Bottom Decorative Footer */
     .page-footer {
       height: 20px;
-      background-color: #e0e5ec;
-      border-top: 1px solid #d1d9e6;
+      background: linear-gradient(90deg, #d1d9e6, #e0e5ec);
+      border-top: 1px solid #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 7.5pt;
+      font-weight: 600;
       color: #7f8c8d;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
     }
 
     /* =========================================
-       PROFILE IMAGE (3D Square)
+       PROFILE IMAGE (Enhanced 3D Square)
     ========================================= */
     .image-container {
       display: flex;
       justify-content: center;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
+      position: relative;
     }
 
     .profile-img {
-      width: 170px;
-      height: 170px;
-      border-radius: 16px; /* Soft Square */
+      width: 180px;
+      height: 180px;
+      border-radius: 20px; /* Modern rounded square */
       object-fit: cover;
-      box-shadow: 8px 8px 16px #b5b5b5, -8px -8px 16px #ffffff;
-      border: 4px solid #e0e5ec;
+      object-position: top center; /* Focuses on the face/torso */
+      /* Stronger 3D Pop Effect */
+      box-shadow: 10px 10px 20px #b5bdc6, -10px -10px 20px #ffffff;
+      border: 5px solid #f0f4f8;
+      transition: transform 0.3s ease;
     }
 
     /* =========================================
        TYPOGRAPHY & HEADINGS
     ========================================= */
     h1 {
-      font-size: 24pt;
+      font-size: 26pt;
       font-weight: 800;
       color: #2c3e50;
       letter-spacing: 1px;
       text-transform: uppercase;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-      margin-bottom: 2px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+      margin-bottom: 4px;
     }
 
     h2.title {
-      font-size: 10.5pt;
-      font-weight: 600;
+      font-size: 11pt;
+      font-weight: 700;
       color: #d35400;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
     }
 
     .section-header {
-      font-size: 12pt;
-      font-weight: 700;
+      font-size: 12.5pt;
+      font-weight: 800;
       color: #2c3e50;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 1.2px;
       border-bottom: 2px solid #bdc3c7;
       padding-bottom: 4px;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
       position: relative;
     }
     
@@ -154,14 +163,14 @@
       left: 0;
       bottom: -2px;
       height: 2px;
-      width: 40px;
+      width: 45px;
       background-color: #d35400;
       box-shadow: 0px 2px 4px rgba(211, 84, 0, 0.4);
     }
 
     p, li {
       font-size: 9pt;
-      line-height: 1.45;
+      line-height: 1.5;
       color: #444;
     }
 
@@ -169,7 +178,7 @@
        SIDEBAR SECTIONS
     ========================================= */
     .contact-item {
-      margin-bottom: 6px;
+      margin-bottom: 8px;
       display: flex;
       flex-direction: column;
     }
@@ -177,30 +186,37 @@
       font-size: 8pt;
       color: #d35400;
       text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .contact-item span, .contact-item a {
+      font-size: 9pt;
+      color: #333;
     }
     
     .skills-category {
-      font-size: 8.5pt;
+      font-size: 9pt;
       font-weight: 700;
-      color: #2980b9;
-      margin-top: 6px;
-      margin-bottom: 3px;
+      color: #2c3e50;
+      margin-top: 8px;
+      margin-bottom: 6px;
+      border-left: 3px solid #2980b9;
+      padding-left: 6px;
     }
 
     .skill-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 5px;
-      margin-bottom: 4px;
+      gap: 7px;
+      margin-bottom: 6px;
     }
     .tag {
-      background: #e0e5ec;
-      padding: 3px 7px;
+      background: #e4e9f0;
+      padding: 4px 9px;
       border-radius: 6px;
-      font-size: 8pt;
-      font-weight: 500;
-      box-shadow: 3px 3px 6px #b8bcc2, -3px -3px 6px #ffffff;
-      color: #333;
+      font-size: 8.2pt;
+      font-weight: 600;
+      box-shadow: 3px 3px 6px #c5cbd2, -3px -3px 6px #ffffff;
+      color: #2c3e50;
     }
 
     ul.bullet-list {
@@ -209,40 +225,50 @@
     }
     ul.bullet-list li {
       position: relative;
-      padding-left: 12px;
-      margin-bottom: 3px;
+      padding-left: 14px;
+      margin-bottom: 5px;
+      font-size: 8.5pt;
+      font-weight: 500;
     }
     ul.bullet-list li::before {
-      content: "•";
+      content: "▹";
       position: absolute;
       left: 0;
       color: #d35400;
       font-weight: bold;
+      font-size: 10pt;
+      top: -1px;
     }
 
     /* =========================================
        MAIN CONTENT
     ========================================= */
+    .content-section {
+      margin-bottom: 5px;
+    }
+
     .profile-text {
       text-align: justify;
-      background: #f0f2f5;
-      padding: 10px 12px;
+      background: #f4f6f9;
+      padding: 12px 15px;
       border-radius: 8px;
-      box-shadow: inset 4px 4px 8px #dbdfe4, inset -4px -4px 8px #ffffff;
+      box-shadow: inset 3px 3px 6px #dce1e8, inset -3px -3px 6px #ffffff;
+      border: 1px solid #ffffff;
     }
 
     .portfolio-link {
       display: inline-block;
-      margin-top: 8px;
-      padding: 4px 10px;
+      margin-top: 10px;
+      padding: 6px 12px;
       background: #e0e5ec;
       border-radius: 6px;
-      box-shadow: 3px 3px 6px #d1d5db, -3px -3px 6px #ffffff;
+      box-shadow: 3px 3px 6px #c8ced5, -3px -3px 6px #ffffff;
       font-size: 8.5pt;
+      border: 1px solid #f9f9f9;
     }
 
     .timeline-item {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
     .timeline-header {
       display: flex;
@@ -251,17 +277,17 @@
       margin-bottom: 2px;
     }
     .timeline-title {
-      font-weight: 700;
-      font-size: 10pt;
+      font-weight: 800;
+      font-size: 10.5pt;
       color: #2c3e50;
     }
     .timeline-date {
-      font-size: 8pt;
-      font-weight: 600;
-      color: #7f8c8d;
+      font-size: 8.5pt;
+      font-weight: 700;
+      color: #d35400;
     }
     .timeline-subtitle {
-      font-size: 8.5pt;
+      font-size: 9pt;
       font-style: italic;
       color: #555;
       margin-bottom: 4px;
@@ -269,19 +295,38 @@
 
     .project-card {
       background: #ffffff;
-      padding: 10px;
-      border-radius: 8px;
-      box-shadow: 4px 4px 12px #e6e6e6, -4px -4px 12px #ffffff;
-      margin-bottom: 10px;
-      border: 1px solid #f0f0f0;
+      padding: 12px 15px;
+      border-radius: 10px;
+      box-shadow: 5px 5px 15px #e1e5eb, -5px -5px 15px #ffffff;
+      margin-bottom: 14px;
+      border: 1px solid #f4f4f4;
     }
 
     .project-card ul, .timeline-item ul {
-      margin-top: 4px;
-      padding-left: 16px;
+      margin-top: 6px;
+      padding-left: 18px;
     }
     .project-card li, .timeline-item li {
-      margin-bottom: 3px;
+      margin-bottom: 4px;
+    }
+
+    /* Custom list for the mini-projects */
+    .mini-projects {
+      list-style: none;
+      padding-left: 0 !important;
+    }
+    .mini-projects li {
+      margin-bottom: 8px !important;
+      padding-left: 14px;
+      position: relative;
+    }
+    .mini-projects li::before {
+      content: "▪";
+      color: #2980b9;
+      position: absolute;
+      left: 0;
+      font-size: 12pt;
+      top: -3px;
     }
 
     /* =========================================
@@ -313,15 +358,19 @@
 
   <div class="resume-a4">
     
+    <!-- Header Decor -->
     <div class="page-header"></div>
 
     <div class="content-wrapper">
+      <!-- ================= LEFT SIDEBAR ================= -->
       <div class="sidebar">
         
+        <!-- Profile Image -->
         <div class="image-container">
-          <img src="IMG-20260328-WA0090.jpg" alt="S Jaya Kumar" class="profile-img">
+          <img src="IMG-20260328-WA0124.jpg" alt="S Jaya Kumar" class="profile-img">
         </div>
 
+        <!-- Contact Info -->
         <div class="section">
           <h3 class="section-header">Contact</h3>
           <div class="contact-item">
@@ -342,13 +391,18 @@
           </div>
           <div class="contact-item">
             <strong>LinkedIn</strong>
-            <a href="#" target="_blank">linkedin.com/in/sjayakumar</a> </div>
+            <a href="https://linkedin.com/in/sjayakumar" target="_blank">linkedin.com/in/sjayakumar</a> 
+          </div>
         </div>
 
+        <!-- Soft Skills (Expanded) -->
         <div class="section">
           <h3 class="section-header">Soft Skills</h3>
           <div class="skill-tags">
+            <span class="tag">Problem Solving</span>
+            <span class="tag">Adaptability</span>
             <span class="tag">Teamwork</span>
+            <span class="tag">Fast Learner</span>
             <span class="tag">Time Management</span>
             <span class="tag">Leadership</span>
             <span class="tag">Communication</span>
@@ -356,11 +410,14 @@
           </div>
         </div>
 
+        <!-- Tech Skills (Expanded) -->
         <div class="section">
           <h3 class="section-header">Tech Skills</h3>
           
           <div class="skills-category">Languages</div>
           <div class="skill-tags">
+            <span class="tag">Java</span>
+            <span class="tag">XML</span>
             <span class="tag">Python</span>
             <span class="tag">JavaScript</span>
             <span class="tag">PHP</span>
@@ -381,33 +438,40 @@
           </div>
 
           <div class="skills-category">Core Concepts</div>
-          <ul class="bullet-list" style="margin-top: 4px;">
-            <li>System Architecture & Logic</li>
+          <ul class="bullet-list">
+            <li>Object-Oriented Programming (OOP)</li>
+            <li>System Architecture & App Logic</li>
             <li>Data Structures & Algorithms</li>
+            <li>API Integration & RESTful Services</li>
+            <li>Application Security Protocols</li>
           </ul>
         </div>
       </div>
 
+      <!-- ================= RIGHT CONTENT ================= -->
       <div class="main-content">
         
+        <!-- Header -->
         <header>
           <h1>S Jaya Kumar</h1>
-          <h2 class="title">Full-Stack Developer</h2>
+          <h2 class="title">Full-Stack & Mobile Developer</h2>
         </header>
 
-        <section>
+        <!-- Profile (Elaborated) -->
+        <div class="content-section">
           <h3 class="section-header">Profile</h3>
           <div class="profile-text">
             <p>
-              Creative, logic-driven BCA graduate with a passion for building practical software solutions. Hands-on experience conceptualizing and developing mobile security concepts and responsive web platforms. Strong problem-solving skills applied to real-world applications and data analysis.
+              Ambitious and logic-driven BCA graduate with a strong foundation in full-stack architecture and a passion for building practical, user-centric software solutions. Hands-on experience conceptualizing and deploying secure mobile applications, responsive web platforms, and data-driven Python scripts. Highly adaptable problem-solver with a keen eye for optimizing technical workflows, eager to leverage deep technical expertise in a dynamic enterprise environment.
             </p>
             <div class="portfolio-link">
               <strong>Interactive Portfolio:</strong> <a href="https://starktechdev26.github.io/" target="_blank">starktechdev26.github.io</a>
             </div>
           </div>
-        </section>
+        </div>
 
-        <section>
+        <!-- Experience -->
+        <div class="content-section">
           <h3 class="section-header">Experience</h3>
           
           <div class="timeline-item">
@@ -417,13 +481,14 @@
             </div>
             <div class="timeline-subtitle">Data Analysis & Algorithm Development</div>
             <ul>
-              <li>Leveraged Python to analyze and process large sets of stock market data.</li>
-              <li>Developed automated scripts to identify market trends and optimize data retrieval processes.</li>
+              <li>Leveraged Python to analyze and process large sets of complex stock market data.</li>
+              <li>Developed automated scripts to identify market trends and optimize data retrieval processes efficiently.</li>
             </ul>
           </div>
-        </section>
+        </div>
 
-        <section>
+        <!-- Projects -->
+        <div class="content-section">
           <h3 class="section-header">Projects</h3>
           
           <div class="project-card">
@@ -433,26 +498,29 @@
             </div>
             <div class="timeline-subtitle">Personal Security & SOS Ecosystem</div>
             <ul>
-              <li><strong>Overview:</strong> Designed the system architecture for a mobile security application focused on device anti-theft and personal safety.</li>
-              <li><strong>Web Portal:</strong> Built a responsive companion dashboard using HTML, CSS, JavaScript, and PHP.</li>
-              <li><strong>Core Logic:</strong> Engineered critical safety features, including an automated inactivity SOS trigger.</li>
+              <li><strong>Architecture:</strong> Designed a robust mobile security application focused on device anti-theft and personal safety protocols.</li>
+              <li><strong>Web Portal:</strong> Built a responsive companion dashboard using HTML, CSS, JavaScript, and PHP for secure app distribution.</li>
+              <li><strong>Core Logic:</strong> Engineered critical safety features, including an automated inactivity SOS trigger for emergency response.</li>
             </ul>
           </div>
 
           <div class="project-card">
             <div class="timeline-header">
-              <span class="timeline-title">Jarvis Voice Assistant</span>
-              <span class="timeline-date">2026</span>
+              <span class="timeline-title">Versatile Application Development</span>
+              <span class="timeline-date">2025 - 2026</span>
             </div>
-            <div class="timeline-subtitle">AI-Driven Interactive Chat System</div>
-            <ul>
-              <li>Developed a character-themed, voice-automated AI chat system.</li>
-              <li>Integrated scanning functionalities and optimized code for real-time user interaction.</li>
+            <div class="timeline-subtitle">Java, XML, APIs, and AI Integration</div>
+            <ul class="mini-projects">
+              <li><strong>Jarvis Voice Assistant:</strong> Developed a character-themed, voice-automated AI chat system integrating real-time scanning functionalities.</li>
+              <li><strong>Weather Forecasting App:</strong> Built a dynamic application utilizing RESTful APIs to parse and display real-time meteorological data.</li>
+              <li><strong>Web-to-App Bridge:</strong> Engineered a cross-platform control system allowing seamless management of mobile functions via a web interface.</li>
+              <li><strong>Accessibility Integration:</strong> Designed a specialized mobile app feature allowing intuitive device navigation through custom hand-tap gestures.</li>
             </ul>
           </div>
-        </section>
+        </div>
 
-        <section>
+        <!-- Education (Updated Locations) -->
+        <div class="content-section">
           <h3 class="section-header">Education</h3>
           
           <div class="timeline-item">
@@ -460,7 +528,7 @@
               <span class="timeline-title">Bachelor of Computer Applications (BCA)</span>
               <span class="timeline-date">2026</span>
             </div>
-            <div class="timeline-subtitle">Harsha Institute Of Management Studies | Bangalore University (Results Awaited)</div>
+            <div class="timeline-subtitle">Harsha Institute Of Management Studies | Bangalore University, Bangalore (Results Awaited)</div>
           </div>
 
           <div class="timeline-item">
@@ -468,13 +536,22 @@
               <span class="timeline-title">CEBA (Computer Science)</span>
               <span class="timeline-date">2023</span>
             </div>
-            <div class="timeline-subtitle">12th (PUC) | Karnataka State Board</div>
+            <div class="timeline-subtitle">12th (PUC) | Karnataka State Board, Bangalore</div>
           </div>
-        </section>
+          
+          <div class="timeline-item" style="margin-bottom: 0;">
+            <div class="timeline-header">
+              <span class="timeline-title">10th (SSLC)</span>
+              <span class="timeline-date">2021</span>
+            </div>
+            <div class="timeline-subtitle">CBSE Board, Lucknow</div>
+          </div>
+        </div>
 
       </div>
     </div>
 
+    <!-- Footer Decor -->
     <div class="page-footer">
       S JAYA KUMAR • PROFESSIONAL RESUME • 2026
     </div>
