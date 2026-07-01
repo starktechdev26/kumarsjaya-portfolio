@@ -16,7 +16,7 @@
     }
 
     body {
-      background-color: #d9e2ec; /* Slightly deeper background to make the white A4 pop */
+      background-color: #d9e2ec; 
       display: flex;
       justify-content: center;
       padding: 20px;
@@ -40,7 +40,6 @@
       width: 210mm;
       height: 297mm; /* Exact A4 Height */
       background-color: #e0e5ec;
-      /* Enhanced 3D Neumorphic Shadow */
       box-shadow: 25px 25px 50px #b8c0c8, -25px -25px 50px #ffffff;
       border-radius: 12px;
       display: flex;
@@ -49,31 +48,29 @@
       position: relative;
     }
 
-    /* Top Decorative Header */
     .page-header {
-      height: 18px;
+      height: 16px;
       background: linear-gradient(90deg, #1a252f, #2c3e50, #d35400, #e67e22);
       width: 100%;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       z-index: 10;
     }
 
-    /* Main Body Container */
     .content-wrapper {
       display: flex;
       flex: 1;
-      height: calc(100% - 38px); /* Accounts for header and footer */
+      height: calc(100% - 32px); 
     }
 
-    /* Left Sidebar (3D Elevated with Richer Gradient) */
+    /* Left Sidebar */
     .sidebar {
       width: 36%;
       background: linear-gradient(135deg, #e8ecef 0%, #d1d9e6 100%);
-      padding: 30px 20px;
+      padding: 25px 20px;
       border-right: 2px solid #ffffff;
       display: flex;
       flex-direction: column;
-      gap: 18px;
+      gap: 15px; /* Tightened gap */
       box-shadow: inset -5px 0 15px rgba(0,0,0,0.02);
     }
 
@@ -81,79 +78,76 @@
     .main-content {
       width: 64%;
       background-color: #fafafa;
-      padding: 30px 32px;
+      padding: 25px 30px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between; /* Dynamically fills vertical space */
+      justify-content: space-between; 
     }
 
-    /* Bottom Decorative Footer */
     .page-footer {
-      height: 20px;
+      height: 16px;
       background: linear-gradient(90deg, #d1d9e6, #e0e5ec);
       border-top: 1px solid #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 7.5pt;
+      font-size: 7pt;
       font-weight: 600;
       color: #7f8c8d;
       letter-spacing: 2px;
     }
 
     /* =========================================
-       PROFILE IMAGE (Enhanced 3D Square)
+       PROFILE IMAGE 
     ========================================= */
     .image-container {
       display: flex;
       justify-content: center;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
       position: relative;
     }
 
     .profile-img {
-      width: 180px;
-      height: 180px;
-      border-radius: 20px; /* Modern rounded square */
+      width: 160px;
+      height: 160px;
+      border-radius: 18px; 
       object-fit: cover;
-      object-position: top center; /* Focuses on the face/torso */
-      /* Stronger 3D Pop Effect */
-      box-shadow: 10px 10px 20px #b5bdc6, -10px -10px 20px #ffffff;
-      border: 5px solid #f0f4f8;
-      transition: transform 0.3s ease;
+      object-position: top center; 
+      box-shadow: 8px 8px 16px #b5bdc6, -8px -8px 16px #ffffff;
+      border: 4px solid #f0f4f8;
     }
 
     /* =========================================
        TYPOGRAPHY & HEADINGS
     ========================================= */
     h1 {
-      font-size: 26pt;
+      font-size: 24pt;
       font-weight: 800;
       color: #2c3e50;
       letter-spacing: 1px;
       text-transform: uppercase;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
 
     h2.title {
-      font-size: 11pt;
+      font-size: 10.5pt;
       font-weight: 700;
       color: #d35400;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .section-header {
-      font-size: 12.5pt;
+      font-size: 12pt;
       font-weight: 800;
       color: #2c3e50;
       text-transform: uppercase;
       letter-spacing: 1.2px;
       border-bottom: 2px solid #bdc3c7;
-      padding-bottom: 4px;
-      margin-bottom: 12px;
+      padding-bottom: 3px;
+      margin-bottom: 10px;
       position: relative;
     }
     
@@ -169,8 +163,8 @@
     }
 
     p, li {
-      font-size: 9pt;
-      line-height: 1.5;
+      font-size: 8.5pt;
+      line-height: 1.45;
       color: #444;
     }
 
@@ -178,27 +172,27 @@
        SIDEBAR SECTIONS
     ========================================= */
     .contact-item {
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       display: flex;
       flex-direction: column;
     }
     .contact-item strong {
-      font-size: 8pt;
+      font-size: 7.5pt;
       color: #d35400;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
     .contact-item span, .contact-item a {
-      font-size: 9pt;
+      font-size: 8.5pt;
       color: #333;
     }
     
     .skills-category {
-      font-size: 9pt;
+      font-size: 8.5pt;
       font-weight: 700;
       color: #2c3e50;
-      margin-top: 8px;
-      margin-bottom: 6px;
+      margin-top: 6px;
+      margin-bottom: 5px;
       border-left: 3px solid #2980b9;
       padding-left: 6px;
     }
@@ -206,14 +200,14 @@
     .skill-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 7px;
-      margin-bottom: 6px;
+      gap: 6px;
+      margin-bottom: 4px;
     }
     .tag {
       background: #e4e9f0;
-      padding: 4px 9px;
+      padding: 3px 8px;
       border-radius: 6px;
-      font-size: 8.2pt;
+      font-size: 8pt;
       font-weight: 600;
       box-shadow: 3px 3px 6px #c5cbd2, -3px -3px 6px #ffffff;
       color: #2c3e50;
@@ -225,9 +219,9 @@
     }
     ul.bullet-list li {
       position: relative;
-      padding-left: 14px;
-      margin-bottom: 5px;
-      font-size: 8.5pt;
+      padding-left: 12px;
+      margin-bottom: 4px;
+      font-size: 8pt;
       font-weight: 500;
     }
     ul.bullet-list li::before {
@@ -236,7 +230,7 @@
       left: 0;
       color: #d35400;
       font-weight: bold;
-      font-size: 10pt;
+      font-size: 9pt;
       top: -1px;
     }
 
@@ -244,13 +238,13 @@
        MAIN CONTENT
     ========================================= */
     .content-section {
-      margin-bottom: 5px;
+      margin-bottom: 4px;
     }
 
     .profile-text {
       text-align: justify;
       background: #f4f6f9;
-      padding: 12px 15px;
+      padding: 10px 12px;
       border-radius: 8px;
       box-shadow: inset 3px 3px 6px #dce1e8, inset -3px -3px 6px #ffffff;
       border: 1px solid #ffffff;
@@ -258,17 +252,17 @@
 
     .portfolio-link {
       display: inline-block;
-      margin-top: 10px;
-      padding: 6px 12px;
+      margin-top: 8px;
+      padding: 5px 10px;
       background: #e0e5ec;
       border-radius: 6px;
       box-shadow: 3px 3px 6px #c8ced5, -3px -3px 6px #ffffff;
-      font-size: 8.5pt;
+      font-size: 8pt;
       border: 1px solid #f9f9f9;
     }
 
     .timeline-item {
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
     .timeline-header {
       display: flex;
@@ -278,46 +272,45 @@
     }
     .timeline-title {
       font-weight: 800;
-      font-size: 10.5pt;
+      font-size: 10pt;
       color: #2c3e50;
     }
     .timeline-date {
-      font-size: 8.5pt;
+      font-size: 8pt;
       font-weight: 700;
       color: #d35400;
     }
     .timeline-subtitle {
-      font-size: 9pt;
+      font-size: 8.5pt;
       font-style: italic;
       color: #555;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
 
     .project-card {
       background: #ffffff;
-      padding: 12px 15px;
+      padding: 10px 12px;
       border-radius: 10px;
       box-shadow: 5px 5px 15px #e1e5eb, -5px -5px 15px #ffffff;
-      margin-bottom: 14px;
+      margin-bottom: 10px;
       border: 1px solid #f4f4f4;
     }
 
     .project-card ul, .timeline-item ul {
-      margin-top: 6px;
-      padding-left: 18px;
+      margin-top: 5px;
+      padding-left: 16px;
     }
     .project-card li, .timeline-item li {
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
 
-    /* Custom list for the mini-projects */
     .mini-projects {
       list-style: none;
       padding-left: 0 !important;
     }
     .mini-projects li {
-      margin-bottom: 8px !important;
-      padding-left: 14px;
+      margin-bottom: 6px !important;
+      padding-left: 12px;
       position: relative;
     }
     .mini-projects li::before {
@@ -325,7 +318,7 @@
       color: #2980b9;
       position: absolute;
       left: 0;
-      font-size: 12pt;
+      font-size: 11pt;
       top: -3px;
     }
 
@@ -333,6 +326,12 @@
        PRINT SPECIFIC FIXES
     ========================================= */
     @media print {
+      /* Force A4 Size in Print Spooler */
+      @page {
+        size: A4;
+        margin: 0;
+      }
+      
       body {
         margin: 0;
         padding: 0;
@@ -365,9 +364,9 @@
       <!-- ================= LEFT SIDEBAR ================= -->
       <div class="sidebar">
         
-        <!-- Profile Image -->
+        <!-- Profile Image (Reverted to the file currently in your GitHub Repo) -->
         <div class="image-container">
-          <img src="IMG-20260328-WA0124.jpg" alt="S Jaya Kumar" class="profile-img">
+          <img src="IMG-20260328-WA0090.jpg" alt="S Jaya Kumar" class="profile-img">
         </div>
 
         <!-- Contact Info -->
@@ -395,7 +394,7 @@
           </div>
         </div>
 
-        <!-- Soft Skills (Expanded) -->
+        <!-- Soft Skills -->
         <div class="section">
           <h3 class="section-header">Soft Skills</h3>
           <div class="skill-tags">
@@ -410,7 +409,7 @@
           </div>
         </div>
 
-        <!-- Tech Skills (Expanded) -->
+        <!-- Tech Skills -->
         <div class="section">
           <h3 class="section-header">Tech Skills</h3>
           
@@ -457,7 +456,7 @@
           <h2 class="title">Full-Stack & Mobile Developer</h2>
         </header>
 
-        <!-- Profile (Elaborated) -->
+        <!-- Profile -->
         <div class="content-section">
           <h3 class="section-header">Profile</h3>
           <div class="profile-text">
@@ -519,7 +518,7 @@
           </div>
         </div>
 
-        <!-- Education (Updated Locations) -->
+        <!-- Education -->
         <div class="content-section">
           <h3 class="section-header">Education</h3>
           
@@ -528,7 +527,7 @@
               <span class="timeline-title">Bachelor of Computer Applications (BCA)</span>
               <span class="timeline-date">2026</span>
             </div>
-            <div class="timeline-subtitle">Harsha Institute Of Management Studies | Bangalore University, Bangalore (Results Awaited)</div>
+            <div class="timeline-subtitle">Harsha Institute Of Management Studies | Bangalore University (Results Awaited)</div>
           </div>
 
           <div class="timeline-item">
