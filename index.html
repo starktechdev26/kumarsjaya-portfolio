@@ -3,178 +3,272 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Jaya Kumar | Full-Stack Developer</title>
-  <meta name="description" content="Portfolio of Jaya Kumar, a Full-Stack Developer specializing in mobile architecture, web development, and cybersecurity.">
-  <meta name="author" content=" S Jaya Kumar (starktechdev26)">
-  
-  <meta name="theme-color" content="#0b0f19">
+  <title>S Jaya Kumar - Resume</title>
+  <style>
+    /* Reset & Base Settings */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+      background-color: #f0f2f5;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
-  <link rel="preload" href="style.css" as="style">
-  <link rel="preload" href="layout.css" as="style">
+    /* A4 Document Styling */
+    .resume-container {
+      background-color: #fff;
+      width: 210mm; /* A4 Width */
+      min-height: 297mm; /* A4 Height */
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 30px;
+    }
 
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="layout.css">
+    /* Left Column */
+    .left-col {
+      border-right: 2px solid #e0e0e0;
+      padding-right: 30px;
+    }
+
+    .profile-img-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #333;
+    }
+
+    .contact-info {
+      margin-bottom: 30px;
+    }
+
+    .contact-info p {
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #2c3e50;
+      border-bottom: 2px solid #2c3e50;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+      margin-top: 25px;
+    }
+
+    .skills-list, .education-list {
+      list-style: none;
+    }
+
+    .skills-list li, .education-list li {
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+    }
+
+    .skills-list li strong {
+      display: block;
+      color: #2c3e50;
+    }
+
+    /* Right Column */
+    .right-col {
+      padding-left: 10px;
+    }
+
+    .header-name {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #2c3e50;
+      line-height: 1.1;
+      margin-bottom: 5px;
+    }
+
+    .header-title {
+      font-size: 1.4rem;
+      color: #7f8c8d;
+      margin-bottom: 20px;
+    }
+
+    .summary {
+      font-size: 0.95rem;
+      margin-bottom: 30px;
+      text-align: justify;
+    }
+
+    .experience-item, .project-item {
+      margin-bottom: 25px;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 5px;
+    }
+
+    .item-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #2c3e50;
+    }
+
+    .item-date {
+      font-size: 0.9rem;
+      color: #7f8c8d;
+      font-weight: 600;
+    }
+
+    .item-subtitle {
+      font-size: 0.95rem;
+      font-style: italic;
+      color: #34495e;
+      margin-bottom: 8px;
+    }
+
+    .item-desc {
+      list-style-type: disc;
+      padding-left: 20px;
+      font-size: 0.95rem;
+    }
+
+    .item-desc li {
+      margin-bottom: 5px;
+    }
+
+    /* Print Specific Adjustments */
+    @media print {
+      body {
+        background: none;
+        padding: 0;
+      }
+      .resume-container {
+        box-shadow: none;
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-    <!-- =======================================
-       CINEMATIC INTRO OVERLAY
-  ======================================== -->
-  <div id="cinematic-intro">
-    <div class="intro-content">
-      <p class="glitch-text">INITIALIZING WORKSPACE...</p>
-      <div class="loading-bar-container">
-        <div class="loading-bar"></div>
+  <div class="resume-container">
+    
+    <!-- LEFT COLUMN -->
+    <div class="left-col">
+      <div class="profile-img-container">
+        <!-- Image referenced exactly as found in your GitHub repo -->
+        <img src="IMG_20260211_151136.jpg" alt="S Jaya Kumar Profile" class="profile-img">
       </div>
+
+      <div class="contact-info">
+        <h2 class="section-title">Contact</h2>
+        <p><strong>Location:</strong> Nelamangala, Bangalore</p>
+        <p><strong>GitHub:</strong> github.com/starktechdev26</p>
+        <p><strong>Email:</strong> (Insert Email Here)</p>
+        <p><strong>Phone:</strong> (Insert Phone Here)</p>
+      </div>
+
+      <div class="education-section">
+        <h2 class="section-title">Education</h2>
+        <ul class="education-list">
+          <li>
+            <strong>Bachelor of Computer Applications (BCA)</strong>
+            Bangalore University<br>
+            <em>Graduating May 2026</em>
+          </li>
+        </ul>
+      </div>
+
+      <div class="skills-section">
+        <h2 class="section-title">Technical Skills</h2>
+        <ul class="skills-list">
+          <li><strong>Languages</strong> Python, HTML, CSS</li>
+          <li><strong>Web & Mobile</strong> Full-Stack Web Architecture, Mobile Application Development</li>
+          <li><strong>Data & Security</strong> Database Management, Cybersecurity Foundations, Digital & Cyber Laws</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="right-col">
+      <header>
+        <h1 class="header-name">S Jaya Kumar</h1>
+        <h2 class="header-title">Full-Stack Developer</h2>
+      </header>
+
+      <section>
+        <p class="summary">
+          Driven final-year BCA student and full-stack developer with hands-on experience building mobile security applications. Possessing a strong foundation in Python, database management, and web architecture, with a keen interest in mobile architecture and cybersecurity. Highly adaptable and capable of managing end-to-end development lifecycles, primarily utilizing mobile-centric development workflows.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="section-title">Key Projects</h2>
+        
+        <div class="project-item">
+          <div class="item-header">
+            <h3 class="item-title">Raksha-Suraksha</h3>
+            <span class="item-date">2026</span>
+          </div>
+          <p class="item-subtitle">Personal Security & Anti-Theft Mobile Application</p>
+          <ul class="item-desc">
+            <li>Designed and developed a comprehensive mobile security application focused on anti-theft protocols and user safety.</li>
+            <li>Implemented core logic for device monitoring and security alerts directly through mobile development environments.</li>
+            <li>Managed the complete project pivot and rebranding from initial concept to the finalized Raksha-Suraksha architecture.</li>
+          </ul>
+        </div>
+
+        <div class="project-item">
+          <div class="item-header">
+            <h3 class="item-title">Jarvis Voice Assistant</h3>
+            <span class="item-date">2026</span>
+          </div>
+          <p class="item-subtitle">AI-Driven Interactive Chat System</p>
+          <ul class="item-desc">
+            <li>Developed a character-themed, voice-automated AI chat system inspired by advanced pop-culture tech interfaces.</li>
+            <li>Integrated full scanning functionalities and optimized code for responsive, real-time user interaction.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Professional Development</h2>
+        
+        <div class="experience-item">
+          <div class="item-header">
+            <h3 class="item-title">Technical Exploration & Studies</h3>
+            <span class="item-date">Present</span>
+          </div>
+          <ul class="item-desc">
+            <li>Actively studying cyber crimes, cyber laws, and intellectual property rights to integrate robust security frameworks into future applications.</li>
+            <li>Utilizing adaptable coding environments across devices like Redmi and Samsung platforms to maintain consistent project development on the go.</li>
+            <li>Currently seeking hands-on internship opportunities in Bangalore to further refine enterprise-level full-stack capabilities.</li>
+          </ul>
+        </div>
+      </section>
+
     </div>
   </div>
 
-  
-  <!-- =======================================
-       1. HEADER / NAVIGATION BAR
-  ======================================== -->
-  <header>
-    <a href="#home" class="accent-text">Home</a>
-    <a href="#about">About</a>
-    <a href="#resume">Experience</a>
-    <a href="#works">Works</a>
-    <a href="#contact">Contact</a>
-  </header>
-
-  <!-- =======================================
-       2. HERO SECTION & INTRO
-  ======================================== -->
-  <section id="home" class="hero-section">
-    <!-- To change your profile image, replace the src link below -->
-    <!-- <img src="your-photo.jpg" alt="Profile" style="width: 200px; border-radius: 50%; margin-bottom: 20px;"> -->
-    
-    <h1 class="hero-title accent-text">Hello</h1>
-    <h2 class="hero-subtitle">I'm Jaya Kumar</h2>
-
-    <div class="code-snippets">
-      <div class="glass-card">
-        <pre>
-// My self introduction
-Name {
-  First name: S Jaya Kumar;
-  Role: Full-Stack Dev;
-}
-        </pre>
-      </div>
-      <div class="glass-card" style="margin-top: 40px;">
-        <pre>
-// What I Do {
-  Expertise: Mobile Arch;
-  Interest: Cyber Security;
-  Status: BCA Graduating;
-}
-        </pre>
-      </div>
-    </div>
-  </section>
-
-  <!-- =======================================
-       3. RESUME / TIMELINE SECTION
-  ======================================== -->
-  <section id="resume" class="timeline-section">
-    <h2 class="section-heading"><span class="accent-text">#</span>Experience;</h2>
-    
-    <div class="timeline-grid">
-      <!-- Resume Item 1 -->
-      <div class="timeline-card glass-card">
-        <div class="timeline-year accent-text">2026</div>
-        <h3 class="timeline-title">BCA Graduation</h3>
-        <p class="timeline-desc">Completing my Bachelor of Computer Applications at Bangalore University. Solidifying foundations in full-stack architecture.</p>
-      </div>
-
-      <!-- Resume Item 2 -->
-      <div class="timeline-card glass-card">
-        <div class="timeline-year accent-text">2026</div>
-        <h3 class="timeline-title">Raksha-Suraksha</h3>
-        <p class="timeline-desc">Developed and launched a dedicated personal security and anti-theft mobile application.</p>
-      </div>
-
-      <!-- Resume Item 3 -->
-      <div class="timeline-card glass-card">
-        <div class="timeline-year accent-text">2025</div>
-        <h3 class="timeline-title">Core Development</h3>
-        <p class="timeline-desc">Intensive focus on web architecture, Python, and database management for complex applications.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- =======================================
-       4. LATEST WORKS / PROJECTS
-  ======================================== -->
-  <section id="works" class="timeline-section">
-    <h2 class="section-heading"><span class="accent-text">#</span>Latest Works</h2>
-    <p class="text-muted">A showcase of my recent full-stack and mobile projects.</p>
-
-    <div class="portfolio-grid">
-      <!-- Project 1 -->
-      <div class="project-card glass-card">
-        <!-- Add your project screenshot here -->
-        <div style="height: 150px; background: #1a202c; border-radius: 8px; margin-bottom: 15px;"></div>
-        <h3 class="accent-text">#Raksha-Suraksha</h3>
-        <p class="timeline-desc">Mobile Security & Anti-theft Application</p>
-        <a href="#" style="font-size: 0.8rem; margin-top: 10px; display: inline-block;">View work &rsaquo;</a>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="project-card glass-card">
-        <!-- Add your project screenshot here -->
-        <div style="height: 150px; background: #1a202c; border-radius: 8px; margin-bottom: 15px;"></div>
-        <h3 class="accent-text">#Jarvis Assistant</h3>
-        <p class="timeline-desc">Voice-automated AI chat system.</p>
-        <a href="#" style="font-size: 0.8rem; margin-top: 10px; display: inline-block;">View work &rsaquo;</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- =======================================
-       5. CONTACT / FOOTER
-  ======================================== -->
-  <footer id="contact">
-    <h2 class="footer-text">Don't be shy,<br><span class="accent-text">say hi;</span></h2>
-    <div style="display: flex; justify-content: center; gap: 40px; color: var(--text-muted); font-size: 0.9rem;">
-      <a href="https://github.com/starktechdev26">GitHub</a>
-      <a href="#">LinkedIn</a>
-      <a href="mailto:your-email@example.com" class="accent-text">Start a project?</a>
-    </div>
-  </footer>
-
-  <!-- =======================================
-       ANIMATION LOGIC
-  ======================================== -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const introScreen = document.getElementById('cinematic-intro');
-      const heroSection = document.getElementById('home');
-
-      // Wait for 2.2 seconds (letting the CSS loading bar finish)
-      setTimeout(() => {
-        // Fade out the intro screen
-        introScreen.style.opacity = '0';
-        introScreen.style.visibility = 'hidden';
-        
-        // Add the slide-up animation class to your hero section
-        heroSection.classList.add('fade-in-up');
-        
-        // Remove the intro screen from the DOM entirely after it fades
-        setTimeout(() => {
-          introScreen.remove();
-        }, 1000); 
-
-      }, 2200); 
-    });
-  </script>
-
-  
 </body>
 </html>
-
